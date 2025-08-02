@@ -3,7 +3,9 @@
 <html lang="es">
  <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <meta name="theme-color" content="#1e3a8a"/>
+  <meta name="mobile-web-app-capable" content="yes">
   <title>
    Proteacción - Seguridad Integral
   </title>
@@ -13,9 +15,23 @@
   <style>
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
+        :root {
+          font-size: 16px;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        
+        @media (max-width: 768px) {
+          :root {
+            font-size: 14px;
+          }
         }
         
         .hero-gradient {
@@ -170,6 +186,45 @@
         .back-to-top:hover {
             background-color: #1e3a8a;
         }
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 640px) {
+    .hero-gradient {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+    
+    .whatsapp-float {
+      width: 50px;
+      height: 50px;
+      bottom: 20px;
+      right: 20px;
+      font-size: 24px;
+    }
+    
+    .back-to-top {
+      bottom: 80px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+    }
+    
+    #darkToggle {
+      bottom: 0.5rem;
+      left: 0.5rem;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+    }
+    
+    .testimonial-carousel {
+      scroll-snap-type: x mandatory;
+    }
+    
+    .testimonial-slide {
+      min-width: 85vw;
+    }
+  }
   </style>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <style>
@@ -293,24 +348,47 @@
   </button>
   <!-- Header/Navbar -->
   <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
-  <div class="flex items-center justify-between px-8 py-4">
-    <div class="flex items-center space-x-4">
-      <img alt="Logo Proteacción" class="h-16 w-auto" src="logo_proteaccion_clean_v2.png"/>
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-3">
+        <div class="flex items-center">
+          <img alt="Logo Proteacción" 
+               class="h-12 w-auto md:h-16" 
+               src="logo_proteaccion_clean_v2.png"
+               loading="eager"
+               decoding="async"
+               width="128"
+               height="128"
+               onerror="this.src='https://via.placeholder.com/128x128?text=PROTEACCIÓN';this.onerror=null"/>
+        </div>
+        <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+        <nav class="hidden md:flex space-x-4 lg:space-x-8 text-base md:text-lg font-medium text-gray-800 dark:text-white">
+          <a class="nav-link hover:text-red-500 transition" href="#inicio">Inicio</a>
+          <a class="nav-link hover:text-red-500 transition" href="#servicios">Servicios</a>
+          <a class="nav-link hover:text-red-500 transition" href="#nosotros">Nosotros</a>
+          <a class="nav-link hover:text-red-500 transition" href="#contacto">Contacto</a>
+        </nav>
+      </div>
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="flex flex-col space-y-3">
+          <a class="nav-link hover:text-red-500 transition" href="#inicio">Inicio</a>
+          <a class="nav-link hover:text-red-500 transition" href="#servicios">Servicios</a>
+          <a class="nav-link hover:text-red-500 transition" href="#nosotros">Nosotros</a>
+          <a class="nav-link hover:text-red-500 transition" href="#contacto">Contacto</a>
+        </div>
+      </div>
     </div>
-    <nav class="flex space-x-8 text-lg font-medium text-gray-800 dark:text-white">
-      <a class="hover:text-red-500 transition" href="#inicio">Inicio</a>
-      <a class="hover:text-red-500 transition" href="#servicios">Servicios</a>
-      <a class="hover:text-red-500 transition" href="#nosotros">Nosotros</a>
-      <a class="hover:text-red-500 transition" href="#contacto">Contacto</a>
-    </nav>
-  </div>
-</header>
+  </header>
 
   <!-- Hero Section -->
-  <section class="hero-gradient text-white py-20" id="inicio">
+  <section class="hero-gradient text-white py-12 md:py-20" id="inicio">
    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2 mb-10 md:mb-0 animate-fade-in-up">
-     <h1 class="text-4xl md:text-5xl font-bold mb-6">
+    <div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in-up">
+     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
       Seguridad Integral para tu Hogar y Negocio
      </h1>
      <p class="text-xl mb-8">
@@ -381,7 +459,7 @@
       Ofrecemos soluciones completas de seguridad adaptadas a tus necesidades específicas.
      </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
      <!-- Servicio 1 -->
      <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
       <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
@@ -835,8 +913,8 @@
       Estamos listos para proteger lo que más valoras. Contáctanos para una asesoría gratuita.
      </p>
     </div>
-    <div class="flex flex-col md:flex-row">
-     <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+    <div class="flex flex-col md:flex-row gap-6">
+     <div class="md:w-1/2 mb-6 md:mb-0">
       <div class="bg-white p-1 rounded-lg shadow-md h-full">
        <iframe allowfullscreen="" class="rounded-lg" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1791.7564615126046!2d-98.28837864967034!3d26.082170197733216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86650f4a0d6c45cf%3A0xea9b7c29a20643b1!2sChihuahua%20440%2C%20Rodr%C3%ADguez%2C%2088630%20Reynosa%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1752460280668!5m2!1ses-419!2smx" style="min-height: 500px; border:0;" width="100%">
        </iframe>

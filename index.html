@@ -3,7 +3,7 @@
 <html lang="es">
  <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover"/>
   <meta name="theme-color" content="#1e3a8a"/>
   <meta name="mobile-web-app-capable" content="yes">
   <title>
@@ -16,7 +16,7 @@
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         :root {
-          font-size: 16px;
+          font-size: clamp(14px, 2vw, 16px);
         }
         
         body {
@@ -26,12 +26,8 @@
             -webkit-text-size-adjust: 100%;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
-        }
-        
-        @media (max-width: 768px) {
-          :root {
-            font-size: 14px;
-          }
+            overflow-x: hidden;
+            min-height: 100vh;
         }
         
         .hero-gradient {
@@ -188,41 +184,86 @@
         }
   }
 
-  /* Mobile-specific styles */
-  @media (max-width: 640px) {
+  /* Responsive breakpoints */
+  @media (max-width: 1024px) {
     .hero-gradient {
-      padding-top: 6rem;
-      padding-bottom: 6rem;
+      padding: 4rem 1rem;
+    }
+    
+    .service-card {
+      min-width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-gradient {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .hero-gradient > div {
+      width: 100% !important;
+      padding: 1rem;
+    }
+    
+    .stats-section div {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-section {
+      flex-direction: column;
+    }
+    
+    .contact-section > div {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    :root {
+      font-size: clamp(12px, 3.5vw, 14px);
     }
     
     .whatsapp-float {
-      width: 50px;
-      height: 50px;
-      bottom: 20px;
-      right: 20px;
-      font-size: 24px;
+      width: 3.5rem;
+      height: 3.5rem;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      font-size: 1.5rem;
     }
     
     .back-to-top {
-      bottom: 80px;
-      right: 20px;
-      width: 40px;
-      height: 40px;
+      bottom: 5rem;
+      right: 1.5rem;
+      width: 3rem;
+      height: 3rem;
+      font-size: 1rem;
     }
     
     #darkToggle {
-      bottom: 0.5rem;
-      left: 0.5rem;
-      padding: 0.3rem 0.6rem;
+      bottom: 1rem;
+      left: 1rem;
+      padding: 0.5rem 1rem;
       font-size: 0.8rem;
     }
     
-    .testimonial-carousel {
-      scroll-snap-type: x mandatory;
+    .testimonial-slide {
+      min-width: 90vw;
     }
     
-    .testimonial-slide {
-      min-width: 85vw;
+    .stats-section div {
+      grid-template-columns: 1fr;
+    }
+    
+    button, a.button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      min-width: 10rem;
+    }
+    
+    input, textarea, select {
+      font-size: 1rem;
+      padding: 0.8rem;
     }
   }
   </style>
@@ -395,7 +436,7 @@
       Protección avanzada con tecnología de última generación y atención personalizada las 24 horas.
      </p>
      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-      <a class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg text-center transition duration-300 animate-pulse" href="#servicios">
+      <a class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg text-center transition duration-300 animate-pulse min-h-[3rem] min-w-[12rem] text-lg" href="#servicios">
        <i class="fas fa-shield-alt mr-2">
        </i>
        Nuestros Servicios
@@ -459,7 +500,7 @@
       Ofrecemos soluciones completas de seguridad adaptadas a tus necesidades específicas.
      </p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
      <!-- Servicio 1 -->
      <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
       <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">

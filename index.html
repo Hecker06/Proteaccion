@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
+
 <html lang="es">
- <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover"/>
-  <meta name="theme-color" content="#1e3a8a"/>
-  <meta name="mobile-web-app-capable" content="yes">
-  <title>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, viewport-fit=cover" name="viewport"/>
+<meta content="#1e3a8a" name="theme-color"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<title>
    Proteacción - Seguridad Integral
   </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-  <style>
+<script src="https://cdn.tailwindcss.com">
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
         :root {
@@ -267,8 +268,8 @@
     }
   }
   </style>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <style>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+<style>
    .dark {
   background-color: #111827;
   color: #ffffff;
@@ -342,842 +343,835 @@
   max-width: 400px;
 }
   </style>
- </head>
- <body class="bg-gray-50">
-  <div id="darkToggle">
+<style>/* accesibilidad: texto oculto para links icon-only */
+.sr-only {position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}</style></head>
+<body class="bg-gray-50">
+<div id="darkToggle">
    Modo Oscuro
   </div>
-  <div id="helpModal">
-   <div class="modal-content">
-    <h2 class="text-xl font-bold mb-4">
+<div id="helpModal">
+<div class="modal-content">
+<h2 class="text-xl font-bold mb-4">
      ¿Necesitas ayuda?
     </h2>
-    <p>
+<p>
      📞
      <a class="text-blue-500" href="tel:+528999251144">
       Llámanos
      </a>
-    </p>
-    <p>
+</p>
+<p>
      💬
      <a class="text-green-500" href="https://wa.me/528999251144" target="_blank">
       WhatsApp
      </a>
-    </p>
-    <p>
+</p>
+<p>
      📧
      <a class="text-blue-500" href="mailto:contacto@proteaccion.com">
       Email
      </a>
-    </p>
-    <button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded" onclick="document.getElementById('helpModal').style.display='none'">
+</p>
+<button class="mt-4 px-4 py-2 bg-gray-800 text-white rounded" onclick="document.getElementById('helpModal').style.display='none'">
      Cerrar
     </button>
-   </div>
-  </div>
-  <div id="root">
-  </div>
-  <!-- Floating WhatsApp Button -->
-  <a class="whatsapp-float" href="https://wa.me/528999251144" target="_blank">
-   <i class="fab fa-whatsapp">
-   </i>
-  </a>
-  <!-- Back to Top Button -->
-  <button class="back-to-top">
-   <i class="fas fa-arrow-up">
-   </i>
-  </button>
-  <!-- Header/Navbar -->
-  <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between py-3">
-        <div class="flex items-center">
-          <img alt="Logo Proteacción" 
-               class="h-12 w-auto md:h-16" 
-               src="logo_proteaccion_clean_v2.png"
-               loading="eager"
-               decoding="async"
-               width="128"
-               height="128"
-               onerror="this.src='https://via.placeholder.com/128x128?text=PROTEACCIÓN';this.onerror=null"/>
-        </div>
-        <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-        <nav class="hidden md:flex space-x-4 lg:space-x-8 text-base md:text-lg font-medium text-red-600 dark:text-red-600">
-          <a class="nav-link hover:text-red-500 transition" href="#inicio">Inicio</a>
-          <a class="nav-link hover:text-red-500 transition" href="#servicios">Servicios</a>
-          <a class="nav-link hover:text-red-500 transition" href="#nosotros">Nosotros</a>
-          <a class="nav-link hover:text-red-500 transition" href="#contacto">Contacto</a>
-        </nav>
-      </div>
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden pb-4">
-        <div class="flex flex-col space-y-3">
-          <a class="nav-link hover:text-red-500 transition" href="#inicio">Inicio</a>
-          <a class="nav-link hover:text-red-500 transition" href="#servicios">Servicios</a>
-          <a class="nav-link hover:text-red-500 transition" href="#nosotros">Nosotros</a>
-          <a class="nav-link hover:text-red-500 transition" href="#contacto">Contacto</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero-gradient text-white py-12 md:py-20" id="inicio">
-   <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-    <div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in-up">
-     <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
+</div>
+</div>
+<div id="root">
+</div>
+<!-- Floating WhatsApp Button -->
+<!--accesibilidad: aria-label Abrir chat de WhatsApp de Proteacción--><a aria-label="Abrir chat de WhatsApp de Proteacción" class="whatsapp-float" href="https://wa.me/528999251144" target="_blank">
+<i aria-hidden="true" class="fab fa-whatsapp" focusable="false">
+</i>
+<span class="sr-only">Abrir chat de WhatsApp de Proteacción</span></a>
+<!-- Back to Top Button -->
+<!--accesibilidad: aria-label Volver al inicio--><button aria-label="Volver al inicio" class="back-to-top">
+<i aria-hidden="true" class="fas fa-arrow-up" focusable="false">
+</i>
+<span class="sr-only">Volver al inicio</span></button>
+<!-- Header/Navbar -->
+<header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-md">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between py-3">
+<div class="flex items-center">
+<img alt="Logo Proteacción" class="h-12 w-auto md:h-16" decoding="async" height="128" loading="eager" onerror="this.src='https://via.placeholder.com/128x128?text=PROTEACCIÓN';this.onerror=null" src="logo_proteaccion_clean_v2.png" width="128"/>
+</div>
+<button class="md:hidden text-gray-800 dark:text-white" id="mobile-menu-button">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+<nav class="hidden md:flex space-x-4 lg:space-x-8 text-base md:text-lg font-medium text-red-600 dark:text-red-600">
+<a class="nav-link hover:text-red-500 transition" href="#inicio">Inicio</a>
+<a class="nav-link hover:text-red-500 transition" href="#servicios">Servicios</a>
+<a class="nav-link hover:text-red-500 transition" href="#nosotros">Nosotros</a>
+<a class="nav-link hover:text-red-500 transition" href="#contacto">Contacto</a>
+</nav>
+</div>
+<!-- Mobile menu -->
+<div class="hidden md:hidden pb-4" id="mobile-menu">
+<div class="flex flex-col space-y-3">
+<a class="nav-link hover:text-red-500 transition" href="#inicio">Inicio</a>
+<a class="nav-link hover:text-red-500 transition" href="#servicios">Servicios</a>
+<a class="nav-link hover:text-red-500 transition" href="#nosotros">Nosotros</a>
+<a class="nav-link hover:text-red-500 transition" href="#contacto">Contacto</a>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-gradient text-white py-12 md:py-20" id="inicio">
+<div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in-up">
+<h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
       Seguridad Integral para tu Hogar y Negocio
      </h1>
-     <p class="text-xl mb-8">
+<p class="text-xl mb-8">
       Protección avanzada con tecnología de última generación y atención personalizada las 24 horas.
      </p>
-     <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-      <a class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg text-center transition duration-300 animate-pulse min-h-[3rem] min-w-[12rem] text-lg" href="#servicios">
-       <i class="fas fa-shield-alt mr-2">
-       </i>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<a class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg text-center transition duration-300 animate-pulse min-h-[3rem] min-w-[12rem] text-lg" href="#servicios">
+<i aria-hidden="true" class="fas fa-shield-alt mr-2" focusable="false">
+</i>
        Nuestros Servicios
       </a>
-     </div>
-    </div>
-    <div class="md:w-1/2 flex justify-center animate-fade-in-up" style="animation-delay: 0.2s;">
-     <img alt="Sistema de seguridad" class="rounded-lg shadow-2xl max-w-full h-auto transform hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
-    </div>
-   </div>
-  </section>
-  <!-- Stats Section -->
-  <section class="bg-blue-800 text-white py-12">
-   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-     <div class="p-4">
-      <div class="text-4xl font-bold mb-2">
+</div>
+</div>
+<div class="md:w-1/2 flex justify-center animate-fade-in-up" style="animation-delay: 0.2s;">
+<img alt="Sistema de seguridad" class="rounded-lg shadow-2xl max-w-full h-auto transform hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-blue-800 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="p-4">
+<div class="text-4xl font-bold mb-2">
        30+
       </div>
-      <div class="text-blue-200">
+<div class="text-blue-200">
        Años de Experiencia
       </div>
-     </div>
-     <div class="p-4">
-      <div class="text-4xl font-bold mb-2">
+</div>
+<div class="p-4">
+<div class="text-4xl font-bold mb-2">
        1,500+
       </div>
-      <div class="text-blue-200">
+<div class="text-blue-200">
        Clientes Satisfechos
       </div>
-     </div>
-     <div class="p-4">
-      <div class="text-4xl font-bold mb-2">
+</div>
+<div class="p-4">
+<div class="text-4xl font-bold mb-2">
        24/7
       </div>
-      <div class="text-blue-200">
+<div class="text-blue-200">
        Monitoreo Constante
       </div>
-     </div>
-     <div class="p-4">
-      <div class="text-4xl font-bold mb-2">
+</div>
+<div class="p-4">
+<div class="text-4xl font-bold mb-2">
        100%
       </div>
-      <div class="text-blue-200">
+<div class="text-blue-200">
        Garantía de Servicio
       </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Servicios Section -->
-  <section class="py-20 bg-white" id="servicios">
-   <div class="container mx-auto px-4">
-    <div class="text-center mb-16">
-     <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+</div>
+</div>
+</div>
+</section>
+<!-- Servicios Section -->
+<section class="py-20 bg-white" id="servicios">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
       Nuestros Servicios
      </h2>
-     <div class="w-20 h-1 bg-red-600 mx-auto mb-6">
-     </div>
-     <p class="text-gray-600 max-w-2xl mx-auto">
+<div class="w-20 h-1 bg-red-600 mx-auto mb-6">
+</div>
+<p class="text-gray-600 max-w-2xl mx-auto">
       Ofrecemos soluciones completas de seguridad adaptadas a tus necesidades específicas.
      </p>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
-     <!-- Servicio 1 -->
-     <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-       <i class="fas fa-camera text-blue-800 text-2xl">
-       </i>
-      </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 sm:gap-4 md:gap-6">
+<!-- Servicio 1 -->
+<div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i aria-hidden="true" class="fas fa-camera text-blue-800 text-2xl" focusable="false">
+</i>
+</div>
+<h3 class="text-xl font-bold text-blue-800 mb-3">
        Sistemas de CCTV
       </h3>
-      <p class="text-gray-600 mb-4">
+<p class="text-gray-600 mb-4">
        Instalación de cámaras de vigilancia de alta definición con visión nocturna y monitoreo remoto.
       </p>
-      <ul class="mb-4 space-y-2 text-gray-600">
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+<ul class="mb-4 space-y-2 text-gray-600">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Cámaras de alta calidad
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Visión nocturna hasta 30m
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Almacenamiento en la nube
         </span>
-       </li>
-      </ul>
-     </div>
-     <!-- Servicio 2 -->
-     <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-       <i class="fas fa-lock text-blue-800 text-2xl">
-       </i>
-      </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">
+</li>
+</ul>
+</div>
+<!-- Servicio 2 -->
+<div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i aria-hidden="true" class="fas fa-lock text-blue-800 text-2xl" focusable="false">
+</i>
+</div>
+<h3 class="text-xl font-bold text-blue-800 mb-3">
        Alarmas Inteligentes
       </h3>
-      <p class="text-gray-600 mb-4">
+<p class="text-gray-600 mb-4">
        Sistemas de detección de intrusos con notificaciones instantáneas a tu dispositivo móvil.
       </p>
-      <ul class="mb-4 space-y-2 text-gray-600">
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+<ul class="mb-4 space-y-2 text-gray-600">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Sensores de movimiento
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Control desde tu smartphone
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Integración con otros sistemas
         </span>
-       </li>
-      </ul>
-     </div>
-     <!-- Servicio 3 -->
-     <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-       <i class="fas fa-fire-extinguisher text-blue-800 text-2xl">
-       </i>
-      </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">
+</li>
+</ul>
+</div>
+<!-- Servicio 3 -->
+<div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i aria-hidden="true" class="fas fa-fire-extinguisher text-blue-800 text-2xl" focusable="false">
+</i>
+</div>
+<h3 class="text-xl font-bold text-blue-800 mb-3">
        Detección de Incendios
       </h3>
-      <p class="text-gray-600 mb-4">
+<p class="text-gray-600 mb-4">
        Sistemas automáticos de detección y extinción de incendios para protección total.
       </p>
-      <ul class="mb-4 space-y-2 text-gray-600">
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+<ul class="mb-4 space-y-2 text-gray-600">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Detección temprana de humo
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Sistemas de rociadores
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Alertas a bomberos
         </span>
-       </li>
-      </ul>
-     </div>
-     <!-- Servicio 4 -->
-     <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-       <i class="fas fa-fingerprint text-blue-800 text-2xl">
-       </i>
-      </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">
+</li>
+</ul>
+</div>
+<!-- Servicio 4 -->
+<div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i aria-hidden="true" class="fas fa-fingerprint text-blue-800 text-2xl" focusable="false">
+</i>
+</div>
+<h3 class="text-xl font-bold text-blue-800 mb-3">
        Control de Accesos
       </h3>
-      <p class="text-gray-600 mb-4">
+<p class="text-gray-600 mb-4">
        Sistemas biométricos y de tarjetas para gestionar quién entra y sale de tus instalaciones.
       </p>
-      <ul class="mb-4 space-y-2 text-gray-600">
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+<ul class="mb-4 space-y-2 text-gray-600">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Lectores de huella digital
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Reconocimiento facial
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Tarjetas RFID
         </span>
-       </li>
-      </ul>
-     </div>
-     <!-- Servicio 5 -->
-     <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-       <i class="fas fa-home text-blue-800 text-2xl">
-       </i>
-      </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">
+</li>
+</ul>
+</div>
+<!-- Servicio 5 -->
+<div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i aria-hidden="true" class="fas fa-home text-blue-800 text-2xl" focusable="false">
+</i>
+</div>
+<h3 class="text-xl font-bold text-blue-800 mb-3">
        Domótica y Seguridad
       </h3>
-      <p class="text-gray-600 mb-4">
+<p class="text-gray-600 mb-4">
        Integración de sistemas de seguridad con automatización del hogar para mayor comodidad.
       </p>
-      <ul class="mb-4 space-y-2 text-gray-600">
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+<ul class="mb-4 space-y-2 text-gray-600">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Control de iluminación
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Cerraduras inteligentes
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Asistentes de voz
         </span>
-       </li>
-      </ul>
-     </div>
-     <!-- Servicio 6 -->
-     <div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
-      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-       <i class="fas fa-shield-alt text-blue-800 text-2xl">
-       </i>
-      </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">
+</li>
+</ul>
+</div>
+<!-- Servicio 6 -->
+<div class="service-card bg-white p-6 rounded-lg shadow-md border border-gray-100">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+<i aria-hidden="true" class="fas fa-shield-alt text-blue-800 text-2xl" focusable="false">
+</i>
+</div>
+<h3 class="text-xl font-bold text-blue-800 mb-3">
        Monitoreo 24/7
       </h3>
-      <p class="text-gray-600 mb-4">
+<p class="text-gray-600 mb-4">
        Vigilancia constante por nuestro equipo de profesionales desde nuestra central de monitoreo.
       </p>
-      <ul class="mb-4 space-y-2 text-gray-600">
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+<ul class="mb-4 space-y-2 text-gray-600">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Respuesta inmediata
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Alertas a autoridades
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-check text-green-500 mt-1 mr-2">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-check text-green-500 mt-1 mr-2" focusable="false">
+</i>
+<span>
          Reportes diarios
         </span>
-       </li>
-      </ul>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Nosotros Section -->
-  <section class="py-20 bg-gray-50" id="nosotros">
-   <div class="container mx-auto px-4">
-    <div class="flex flex-col md:flex-row items-center">
-     <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-      <img alt="Equipo de Proteacción" class="rounded-lg shadow-xl w-full transform hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
-     </div>
-     <div class="md:w-1/2">
-      <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Nosotros Section -->
+<section class="py-20 bg-gray-50" id="nosotros">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center">
+<div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+<img alt="Equipo de Proteacción" class="rounded-lg shadow-xl w-full transform hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1470&amp;q=80"/>
+</div>
+<div class="md:w-1/2">
+<h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">
        Sobre Nosotros
       </h2>
-      <div class="w-20 h-1 bg-red-600 mb-6">
-      </div>
-      <p class="text-gray-600 mb-6">
+<div class="w-20 h-1 bg-red-600 mb-6">
+</div>
+<p class="text-gray-600 mb-6">
        En
        <span class="font-bold text-blue-800">
         Proteacción
        </span>
        llevamos más de 30 años protegiendo lo que más valoras. Nuestro equipo de expertos en seguridad está comprometido con ofrecer soluciones personalizadas y tecnología de punta.
       </p>
-      <p class="text-gray-600 mb-8">
+<p class="text-gray-600 mb-8">
        Nos enorgullecemos de nuestro servicio al cliente excepcional y nuestra capacidad para responder rápidamente a las necesidades de seguridad de nuestros clientes, ya sean residenciales o comerciales.
       </p>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-       <div class="flex items-start">
-        <div class="bg-blue-100 p-2 rounded-full mr-4">
-         <i class="fas fa-check text-blue-800">
-         </i>
-        </div>
-        <div>
-         <h4 class="font-bold text-blue-800 mb-1">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+<div class="flex items-start">
+<div class="bg-blue-100 p-2 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-check text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<!--accesibilidad: jerarquía ajustada--><h3 class="font-bold text-blue-800 mb-1">
           Certificaciones
-         </h4>
-         <p class="text-gray-600 text-sm">
+         </h3>
+<p class="text-gray-600 text-sm">
           Profesionales certificados en seguridad electrónica
          </p>
-        </div>
-       </div>
-       <div class="flex items-start">
-        <div class="bg-blue-100 p-2 rounded-full mr-4">
-         <i class="fas fa-check text-blue-800">
-         </i>
-        </div>
-        <div>
-         <h4 class="font-bold text-blue-800 mb-1">
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-blue-100 p-2 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-check text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
           Tecnología
          </h4>
-         <p class="text-gray-600 text-sm">
+<p class="text-gray-600 text-sm">
           Equipos de última generación
          </p>
-        </div>
-       </div>
-       <div class="flex items-start">
-        <div class="bg-blue-100 p-2 rounded-full mr-4">
-         <i class="fas fa-check text-blue-800">
-         </i>
-        </div>
-        <div>
-         <h4 class="font-bold text-blue-800 mb-1">
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-blue-100 p-2 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-check text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
           Garantía
          </h4>
-         <p class="text-gray-600 text-sm">
+<p class="text-gray-600 text-sm">
           Soporte técnico y mantenimiento incluido
          </p>
-        </div>
-       </div>
-       <div class="flex items-start">
-        <div class="bg-blue-100 p-2 rounded-full mr-4">
-         <i class="fas fa-check text-blue-800">
-         </i>
-        </div>
-        <div>
-         <h4 class="font-bold text-blue-800 mb-1">
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-blue-100 p-2 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-check text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
           Experiencia
          </h4>
-         <p class="text-gray-600 text-sm">
+<p class="text-gray-600 text-sm">
           Más de 1,500 instalaciones realizadas
          </p>
-        </div>
-       </div>
-      </div>
-      <a class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" href="#contacto">
-       <i class="fas fa-envelope mr-2">
-       </i>
+</div>
+</div>
+</div>
+<a class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" href="#contacto">
+<i aria-hidden="true" class="fas fa-envelope mr-2" focusable="false">
+</i>
        Contáctanos
       </a>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- FAQ Section -->
-  <section class="py-20 bg-gray-100">
-   <div class="container mx-auto px-4">
-    <div class="text-center mb-16">
-     <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-20 bg-gray-100">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
       Preguntas Frecuentes
      </h2>
-     <div class="w-20 h-1 bg-red-600 mx-auto mb-6">
-     </div>
-     <p class="text-gray-600 max-w-2xl mx-auto">
+<div class="w-20 h-1 bg-red-600 mx-auto mb-6">
+</div>
+<p class="text-gray-600 max-w-2xl mx-auto">
       Resuelve tus dudas sobre nuestros servicios de seguridad
      </p>
-    </div>
-    <div class="max-w-3xl mx-auto space-y-4">
-     <!-- FAQ Item 1 -->
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
-       <h3 class="font-bold text-blue-800">
+</div>
+<div class="max-w-3xl mx-auto space-y-4">
+<!-- FAQ Item 1 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
+<h3 class="font-bold text-blue-800">
         ¿Qué incluye la instalación de un sistema de seguridad?
        </h3>
-       <i class="fas fa-chevron-down text-blue-800 transition-transform duration-300">
-       </i>
-      </button>
-      <div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
-       <p class="text-gray-600">
+<i aria-hidden="true" class="fas fa-chevron-down text-blue-800 transition-transform duration-300" focusable="false">
+</i>
+</button>
+<div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
+<p class="text-gray-600">
         Nuestra instalación incluye todo el equipo necesario (cámaras, sensores, panel de control), configuración personalizada, capacitación básica sobre el uso del sistema y garantía de 1 año en la instalación. También ofrecemos soporte técnico telefónico las 24 horas.
        </p>
-      </div>
-     </div>
-     <!-- FAQ Item 2 -->
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
-       <h3 class="font-bold text-blue-800">
+</div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
+<h3 class="font-bold text-blue-800">
         ¿Puedo monitorear mi sistema desde mi teléfono?
        </h3>
-       <i class="fas fa-chevron-down text-blue-800 transition-transform duration-300">
-       </i>
-      </button>
-      <div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
-       <p class="text-gray-600">
+<i aria-hidden="true" class="fas fa-chevron-down text-blue-800 transition-transform duration-300" focusable="false">
+</i>
+</button>
+<div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
+<p class="text-gray-600">
         Sí, todos nuestros sistemas incluyen una aplicación móvil compatible con iOS y Android que te permite ver las cámaras en tiempo real, recibir alertas, controlar alarmas y acceder a grabaciones históricas desde cualquier lugar con conexión a internet.
        </p>
-      </div>
-     </div>
-     <!-- FAQ Item 3 -->
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
-       <h3 class="font-bold text-blue-800">
+</div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
+<h3 class="font-bold text-blue-800">
         ¿Qué sucede si hay un corte de energía?
        </h3>
-       <i class="fas fa-chevron-down text-blue-800 transition-transform duration-300">
-       </i>
-      </button>
-      <div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
-       <p class="text-gray-600">
+<i aria-hidden="true" class="fas fa-chevron-down text-blue-800 transition-transform duration-300" focusable="false">
+</i>
+</button>
+<div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
+<p class="text-gray-600">
         Nuestros sistemas incluyen baterías de respaldo que mantienen el funcionamiento por hasta 24 horas en caso de corte de energía. Además, nuestro centro de monitoreo recibe una notificación inmediata para que podamos verificar la situación y, si es necesario, enviar asistencia.
        </p>
-      </div>
-     </div>
-     <!-- FAQ Item 4 -->
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
-       <h3 class="font-bold text-blue-800">
+</div>
+</div>
+<!-- FAQ Item 4 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
+<h3 class="font-bold text-blue-800">
         ¿Cómo funciona el servicio de monitoreo 24/7?
        </h3>
-       <i class="fas fa-chevron-down text-blue-800 transition-transform duration-300">
-       </i>
-      </button>
-      <div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
-       <p class="text-gray-600">
+<i aria-hidden="true" class="fas fa-chevron-down text-blue-800 transition-transform duration-300" focusable="false">
+</i>
+</button>
+<div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
+<p class="text-gray-600">
         Nuestro centro de monitoreo opera las 24 horas con personal altamente capacitado. Cuando se activa una alarma, nuestro equipo verifica la situación a través de las cámaras y sensores, contacta al propietario y, si es necesario, alerta a las autoridades correspondientes (policía, bomberos, etc.).
        </p>
-      </div>
-     </div>
-     <!-- FAQ Item 5 -->
-     <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
-       <h3 class="font-bold text-blue-800">
+</div>
+</div>
+<!-- FAQ Item 5 -->
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<button class="faq-question w-full text-left p-4 md:p-6 flex justify-between items-center">
+<h3 class="font-bold text-blue-800">
         ¿Ofrecen mantenimiento para los sistemas instalados?
        </h3>
-       <i class="fas fa-chevron-down text-blue-800 transition-transform duration-300">
-       </i>
-      </button>
-      <div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
-       <p class="text-gray-600">
+<i aria-hidden="true" class="fas fa-chevron-down text-blue-800 transition-transform duration-300" focusable="false">
+</i>
+</button>
+<div class="faq-answer hidden px-4 md:px-6 pb-4 md:pb-6">
+<p class="text-gray-600">
         Sí, ofrecemos planes de mantenimiento preventivo que incluyen revisión de equipos, actualización de software, limpieza de cámaras y pruebas de funcionamiento. Estos planes pueden ser mensuales, trimestrales o anuales según tus necesidades.
        </p>
-      </div>
-     </div>
-    </div>
-    <div class="text-center mt-12">
-     <p class="text-gray-600 mb-6">
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<p class="text-gray-600 mb-6">
       ¿Tienes otra pregunta? Estamos aquí para ayudarte.
      </p>
-     <a class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" href="#contacto">
-      <i class="fas fa-question-circle mr-2">
-      </i>
+<a class="inline-block bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" href="#contacto">
+<i aria-hidden="true" class="fas fa-question-circle mr-2" focusable="false">
+</i>
       Contáctanos
      </a>
-    </div>
-   </div>
-  </section>
-  <!-- Contacto Section -->
-  <section class="py-20 bg-gray-50" id="contacto">
-   <div class="container mx-auto px-4">
-    <div class="text-center mb-16">
-     <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
+</div>
+</div>
+</section>
+<!-- Contacto Section -->
+<section class="py-20 bg-gray-50" id="contacto">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-4">
       Contáctanos
      </h2>
-     <div class="w-20 h-1 bg-red-600 mx-auto mb-6">
-     </div>
-     <p class="text-gray-600 max-w-2xl mx-auto">
+<div class="w-20 h-1 bg-red-600 mx-auto mb-6">
+</div>
+<p class="text-gray-600 max-w-2xl mx-auto">
       Estamos listos para proteger lo que más valoras. Contáctanos para una asesoría gratuita.
      </p>
-    </div>
-    <div class="flex flex-col md:flex-row gap-6">
-     <div class="md:w-1/2 mb-6 md:mb-0">
-      <div class="bg-white p-1 rounded-lg shadow-md h-full">
-       <iframe allowfullscreen="" class="rounded-lg" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1791.7564615126046!2d-98.28837864967034!3d26.082170197733216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86650f4a0d6c45cf%3A0xea9b7c29a20643b1!2sChihuahua%20440%2C%20Rodr%C3%ADguez%2C%2088630%20Reynosa%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1752460280668!5m2!1ses-419!2smx" style="min-height: 500px; border:0;" width="100%">
-       </iframe>
-      </div>
-     </div>
-     <div class="md:w-1/2">
-      <div class="bg-white p-6 rounded-lg shadow-md h-full">
-       <h3 class="text-xl font-bold text-blue-800 mb-6">
+</div>
+<div class="flex flex-col md:flex-row gap-6">
+<div class="md:w-1/2 mb-6 md:mb-0">
+<div class="bg-white p-1 rounded-lg shadow-md h-full">
+<!--accesibilidad: título iframe--><iframe allowfullscreen="" class="rounded-lg" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1791.7564615126046!2d-98.28837864967034!3d26.082170197733216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86650f4a0d6c45cf%3A0xea9b7c29a20643b1!2sChihuahua%20440%2C%20Rodr%C3%ADguez%2C%2088630%20Reynosa%2C%20Tamps.!5e0!3m2!1ses-419!2smx!4v1752460280668!5m2!1ses-419!2smx" style="min-height: 500px; border:0;" title="Mapa de ubicación de Proteacción en Reynosa, Tamaulipas" width="100%">
+</iframe>
+</div>
+</div>
+<div class="md:w-1/2">
+<div class="bg-white p-6 rounded-lg shadow-md h-full">
+<h3 class="text-xl font-bold text-blue-800 mb-6">
         Información de Contacto
        </h3>
-       <div class="space-y-6 mb-8">
-        <div class="flex items-start">
-         <div class="bg-blue-100 p-3 rounded-full mr-4">
-          <i class="fas fa-map-marker-alt text-blue-800">
-          </i>
-         </div>
-         <div>
-          <h4 class="font-bold text-blue-800 mb-1">
+<div class="space-y-6 mb-8">
+<div class="flex items-start">
+<div class="bg-blue-100 p-3 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-map-marker-alt text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
            Dirección
           </h4>
-          <p class="text-gray-600">
+<p class="text-gray-600">
            Calle Oaxaca 440, Col Rodriguez
            <br/>
            Reynosa, 88630
           </p>
-         </div>
-        </div>
-        <div class="flex items-start">
-         <div class="bg-blue-100 p-3 rounded-full mr-4">
-          <i class="fas fa-phone-alt text-blue-800">
-          </i>
-         </div>
-         <div>
-          <h4 class="font-bold text-blue-800 mb-1">
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-blue-100 p-3 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-phone-alt text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
            Teléfono
           </h4>
-          <p class="text-gray-600">
+<p class="text-gray-600">
            +52 899 925 1144
            <br/>
            Lunes a Viernes: 9:00 - 18:00
           </p>
-         </div>
-        </div>
-        <div class="flex items-start">
-         <div class="bg-blue-100 p-3 rounded-full mr-4">
-          <i class="fas fa-envelope text-blue-800">
-          </i>
-         </div>
-         <div>
-          <h4 class="font-bold text-blue-800 mb-1">
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-blue-100 p-3 rounded-full mr-4">
+<i aria-hidden="true" class="fas fa-envelope text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
            Correo electrónico
           </h4>
-          <p class="text-gray-600">
+<p class="text-gray-600">
            contacto@proteaccion.com
           </p>
-         </div>
-        </div>
-        <div class="flex items-start">
-         <div class="bg-blue-100 p-3 rounded-full mr-4">
-          <i class="fab fa-whatsapp text-blue-800">
-          </i>
-         </div>
-         <div>
-          <h4 class="font-bold text-blue-800 mb-1">
+</div>
+</div>
+<div class="flex items-start">
+<div class="bg-blue-100 p-3 rounded-full mr-4">
+<i aria-hidden="true" class="fab fa-whatsapp text-blue-800" focusable="false">
+</i>
+</div>
+<div>
+<h4 class="font-bold text-blue-800 mb-1">
            WhatsApp
           </h4>
-          <p class="text-gray-600">
+<p class="text-gray-600">
            +52 899 925 1144
            <br/>
            Atención para emergencias
           </p>
-         </div>
-        </div>
-       </div>
-       <div class="mt-8">
-        <h4 class="font-bold text-blue-800 mb-4">
+</div>
+</div>
+</div>
+<div class="mt-8">
+<h4 class="font-bold text-blue-800 mb-4">
          Solicita una cotización
         </h4>
-        <form class="space-y-4">
-         <div>
-          <label class="block text-gray-700 mb-2" for="name">
+<form class="space-y-4">
+<div>
+<label class="block text-gray-700 mb-2" for="name">
            Nombre completo
           </label>
-          <input class="form-input w-full p-3 rounded-lg focus:outline-none" id="name" type="text"/>
-         </div>
-         <div>
-          <label class="block text-gray-700 mb-2" for="email">
+<input class="form-input w-full p-3 rounded-lg focus:outline-none" id="name" type="text"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="email">
            Correo electrónico
           </label>
-          <input class="form-input w-full p-3 rounded-lg focus:outline-none" id="email" type="email"/>
-         </div>
-         <div>
-          <label class="block text-gray-700 mb-2" for="phone">
+<input class="form-input w-full p-3 rounded-lg focus:outline-none" id="email" type="email"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="phone">
            Teléfono
           </label>
-          <input class="form-input w-full p-3 rounded-lg focus:outline-none" id="phone" type="tel"/>
-         </div>
-         <div>
-          <label class="block text-gray-700 mb-2" for="service">
+<input class="form-input w-full p-3 rounded-lg focus:outline-none" id="phone" type="tel"/>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="service">
            Servicio de interés
           </label>
-          <select class="form-input w-full p-3 rounded-lg focus:outline-none" id="service">
-           <option value="">
+<select class="form-input w-full p-3 rounded-lg focus:outline-none" id="service">
+<option value="">
             Selecciona un servicio
            </option>
-           <option value="cctv">
+<option value="cctv">
             Sistemas de CCTV
            </option>
-           <option value="alarmas">
+<option value="alarmas">
             Alarmas Inteligentes
            </option>
-           <option value="incendios">
+<option value="incendios">
             Detección de Incendios
            </option>
-           <option value="accesos">
+<option value="accesos">
             Control de Accesos
            </option>
-           <option value="domotica">
+<option value="domotica">
             Domótica y Seguridad
            </option>
-           <option value="monitoreo">
+<option value="monitoreo">
             Monitoreo 24/7
            </option>
-          </select>
-         </div>
-         <div>
-          <label class="block text-gray-700 mb-2" for="message">
+</select>
+</div>
+<div>
+<label class="block text-gray-700 mb-2" for="message">
            Mensaje
           </label>
-          <textarea class="form-input w-full p-3 rounded-lg focus:outline-none" id="message" rows="4"></textarea>
-         </div>
-         <button class="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" type="submit">
+<textarea class="form-input w-full p-3 rounded-lg focus:outline-none" id="message" rows="4"></textarea>
+</div>
+<button class="w-full bg-blue-800 hover:bg-blue-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300" type="submit">
           Enviar solicitud
          </button>
-        </form>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Footer -->
-  <footer class="bg-blue-900 text-white py-12">
-   <div class="container mx-auto px-4">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-     <div>
-      <h3 class="text-xl font-bold mb-4">
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-blue-900 text-white py-12">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="text-xl font-bold mb-4">
        PROTEACCIÓN
       </h3>
-      <p class="mb-4">
+<p class="mb-4">
        Expertos en seguridad electrónica y protección integral para hogares y negocios.
       </p>
-      <div class="flex space-x-4">
-<a class="text-white hover:text-red-300 transition" href="https://facebook.com/proteaccion" target="_blank" rel="noopener">
-  <i class="fab fa-facebook-f"></i>
-</a>
-      </div>
-      <p class="mt-4">
+<div class="flex space-x-4">
+<!--accesibilidad: aria-label Facebook de Proteacción--><a aria-label="Facebook de Proteacción" class="text-white hover:text-red-300 transition" href="https://facebook.com/proteaccion" rel="noopener" target="_blank">
+<i aria-hidden="true" class="fab fa-facebook-f" focusable="false"></i>
+<span class="sr-only">Facebook de Proteacción</span></a>
+</div>
+<p class="mt-4">
        © 2023 Proteacción. Todos los derechos reservados.
       </p>
-     </div>
-     <div>
-      <h4 class="font-bold mb-4">
+</div>
+<div>
+<h4 class="font-bold mb-4">
        Enlaces Rápidos
       </h4>
-      <ul class="space-y-2">
-       <li>
-        <a class="hover:text-red-300 transition" href="#inicio">
+<ul class="space-y-2">
+<li>
+<a class="hover:text-red-300 transition" href="#inicio">
          Inicio
         </a>
-       </li>
-       <li>
-        <a class="hover:text-red-300 transition" href="#servicios">
+</li>
+<li>
+<a class="hover:text-red-300 transition" href="#servicios">
          Servicios
         </a>
-       </li>
-       <li>
-        <a class="hover:text-red-300 transition" href="#nosotros">
+</li>
+<li>
+<a class="hover:text-red-300 transition" href="#nosotros">
          Nosotros
         </a>
-       </li>
-       <li>
-        <a class="hover:text-red-300 transition" href="#clientes">
+</li>
+<li>
+<a class="hover:text-red-300 transition" href="#clientes">
          Clientes
         </a>
-       </li>
-       <li>
-        <a class="hover:text-red-300 transition" href="#contacto">
+</li>
+<li>
+<a class="hover:text-red-300 transition" href="#contacto">
          Contacto
         </a>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4 class="font-bold mb-4">
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">
        Contacto
       </h4>
-      <ul class="space-y-2">
-       <li class="flex items-start">
-        <i class="fas fa-map-marker-alt mt-1 mr-2 text-red-300">
-        </i>
-        <span>
+<ul class="space-y-2">
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-map-marker-alt mt-1 mr-2 text-red-300" focusable="false">
+</i>
+<span>
          Calle Oaxaca 440, Col Rodriguez, Reynosa
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-phone-alt mt-1 mr-2 text-red-300">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-phone-alt mt-1 mr-2 text-red-300" focusable="false">
+</i>
+<span>
          +52 899 925 1144
         </span>
-       </li>
-       <li class="flex items-start">
-        <i class="fas fa-envelope mt-1 mr-2 text-red-300">
-        </i>
-        <span>
+</li>
+<li class="flex items-start">
+<i aria-hidden="true" class="fas fa-envelope mt-1 mr-2 text-red-300" focusable="false">
+</i>
+<span>
          contacto@proteaccion.com
         </span>
-       </li>
-      </ul>
-     </div>
-     <div>
-      <h4 class="font-bold mb-4">
+</li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold mb-4">
        WhatsApp
       </h4>
-      <a class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition" href="https://wa.me/528999251144" target="_blank">
-       <i class="fab fa-whatsapp mr-2 text-xl">
-       </i>
+<a class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white py-2 px-4 rounded-lg transition" href="https://wa.me/528999251144" target="_blank">
+<i aria-hidden="true" class="fab fa-whatsapp mr-2 text-xl" focusable="false">
+</i>
        Envíanos un mensaje
       </a>
-      <div class="mt-6">
-       <h4 class="font-bold mb-2">
+<div class="mt-6">
+<h4 class="font-bold mb-2">
         Horario de atención
        </h4>
-       <p>
+<p>
         Lunes a Viernes: 9:00 - 18:00
         <br/>
         Sábados: 10:00 - 14:00
         <br/>
-       </p>
-      </div>
-     </div>
-    </div>
-    <div class="border-t border-blue-800 mt-10 pt-6 text-center text-sm">
-     <p>
+</p>
+</div>
+</div>
+</div>
+<div class="border-t border-blue-800 mt-10 pt-6 text-center text-sm">
+<p>
       Proteacción es una marca registrada. Todos los sistemas instalados cuentan con garantía y soporte técnico especializado.
      </p>
-    </div>
-   </div>
-  </footer>
-  <script type="text/babel">
+</div>
+</div>
+</footer>
+<script type="text/babel">
    function App() {
             // Menú móvil
             React.useEffect(() => {
@@ -1298,9 +1292,9 @@
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<App />);
   </script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-  </script>
-  <script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+</script>
+<script>
    // Toggle dark mode
 const toggle = document.getElementById("darkToggle");
 toggle.addEventListener("click", () => {
@@ -1320,5 +1314,5 @@ document.getElementById("helpButton").addEventListener("click", () => {
 // AOS init
 AOS.init();
   </script>
- </body>
+</body>
 </html>

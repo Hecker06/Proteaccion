@@ -29,7 +29,25 @@
         outline-offset: 2px;
         border-radius: 4px;
     }
-  </style>
+  
+/* Ajuste definitivo para que el botón Back-to-Top sea perfectamente circular */
+.back-to-top {
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  box-sizing: border-box;
+}
+@media (max-width: 480px) {
+  .back-to-top {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+}
+
+</style>
   <style>
    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         

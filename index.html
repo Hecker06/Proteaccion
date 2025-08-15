@@ -30,7 +30,7 @@
         border-radius: 4px;
     }
   
-/* Ajuste definitivo para que el botón Back-to-Top sea perfectamente circular */
+/* Fix definitivo para que el botón Back-to-Top no se deforme en móviles */
 .back-to-top {
   border-radius: 50% !important;
   display: flex !important;
@@ -44,6 +44,7 @@
   .back-to-top {
     width: 3rem !important;
     height: 3rem !important;
+    min-width: 0 !important; /* Evita el óvalo por min-width heredado */
   }
 }
 
